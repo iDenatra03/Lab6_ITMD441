@@ -59,8 +59,6 @@ footer {
     color: #666;
     position: fixed;
     bottom: 0;
-    position: flex;
-    flex-direction: column;
 }
 
 @media (max-width: 600px) {
