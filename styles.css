@@ -4,70 +4,72 @@ body {
     padding: 0;
     background: #f0f8ff;
     color: #333;
-  }
- main {
-    flex: 1;
- }
-  
-  header {
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
     background: #f6ff00;
     color: rgb(0, 0, 0);
     padding: 1.5rem;
     text-align: center;
-  }
-  
-  select {
+}
+
+select {
     margin-top: 1rem;
     padding: 0.5rem;
     font-size: 1rem;
-  }
-  
-  .dashboard {
+}
+
+.dashboard {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 4rem;
     padding: 2rem;
     background-color: lightskyblue;
-  }
-  
-  .card {
+}
+
+.card {
     background: white;
     padding: 1rem 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
-  }
-  
-  ul {
+}
+
+ul {
     list-style-type: none;
     padding-left: 0;
-  }
-  
-  li {
+}
+
+li {
     margin-bottom: 0.5rem;
-  }
-  
-  footer {
+}
+
+footer {
     text-align: center;
     padding: 1rem;
     background: #eeeeee;
     font-size: 0.9rem;
     color: #666;
-  }
-  
-  @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
     .dashboard {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  }
-  
-  .visually-hidden {
+}
+
+.visually-hidden {
     position: absolute;
     left: -9999px;
     width: 1px;
     height: 1px;
     overflow: hidden;
-  }
-  
+}

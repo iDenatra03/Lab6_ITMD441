@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sunrise & Sunset Dashboard</title>
-  <link rel="stylesheet" href="styles.css"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunrise & Sunset Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <header>
-    <h1>Sunrise & Sunset Dashboard</h1>
-    <p>Select a location to get today and tomorrow's sunrise/sunset data.</p>
-    <label for="locationSelect" class="visually-hidden">Choose a location</label>
-    <select id="locationSelect">
-      <option value="">-- Choose a location --</option>
-      <option value="40.7128,-74.0060">New York, NY</option>
-      <option value="34.0522,-118.2437">Los Angeles, CA</option>
-      <option value="41.85003,-87.65005">Chicago, IL</option>
-      <option value="29.7604,-95.3698">Houston, TX</option>
-      <option value="33.7490,-84.3880">Atlanta, GA</option>
-      <option value="47.6062,-122.3321">Seattle, WA</option>
-      <option value="25.7617,-80.1918">Miami, FL</option>
-      <option value="37.98376,23.72784">Athens, GR</option>
-      <option value="33.44838,-112.07404">Phoenix, AZ</option>
-      <option value="33.048056,43.404716">Baghdad, IQ</option>
-    </select>
-  </header>
+    <div class="wrapper">
+        <header>
+            <h1>Sunrise & Sunset Dashboard</h1>
+            <p>Select a location to get today and tomorrow's sunrise/sunset data.</p>
+            <label for="locationSelect" class="visually-hidden">Choose a location</label>
+            <select id="locationSelect">
+                <option value="">-- Choose a location --</option>
+                <option value="40.7128,-74.0060">New York, NY</option>
+                <option value="34.0522,-118.2437">Los Angeles, CA</option>
+                <option value="41.85003,-87.65005">Chicago, IL</option>
+                <option value="29.7604,-95.3698">Houston, TX</option>
+                <option value="33.7490,-84.3880">Atlanta, GA</option>
+                <option value="47.6062,-122.3321">Seattle, WA</option>
+                <option value="25.7617,-80.1918">Miami, FL</option>
+                <option value="37.98376,23.72784">Athens, GR</option>
+                <option value="33.44838,-112.07404">Phoenix, AZ</option>
+                <option value="33.048056,43.404716">Baghdad, IQ</option>
+            </select>
+        </header>
 
-  <main>
-    <div id="dashboard" class="dashboard">
-      <article class="card">
-        <h2>Today</h2>
-        <div id="todayData">Please select a location above.</div>
-      </article>
-      <article class="card">
-        <h2>Tomorrow</h2>
-        <div id="tomorrowData">Please select a location above.</div>
-      </article>
+        <main>
+            <div id="dashboard" class="dashboard">
+                <article class="card">
+                    <h2>Today</h2>
+                    <div id="todayData">Please select a location above.</div>
+                </article>
+                <article class="card">
+                    <h2>Tomorrow</h2>
+                    <div id="tomorrowData">Please select a location above.</div>
+                </article>
+            </div>
+        </main>
+
+        <footer>
+            <p>Data provided by <a href="https://sunrisesunset.io/api/" target="_blank">SunriseSunset.io API</a></p>
+        </footer>
     </div>
-  </main>
 
-  <footer>
-    <p>Data provided by <a href="https://sunrisesunset.io/api/" target="_blank">SunriseSunset.io API</a></p>
-  </footer>
-
-  <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
+
 </html>

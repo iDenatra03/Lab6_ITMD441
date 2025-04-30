@@ -3,28 +3,28 @@ const todayData = document.getElementById("todayData");
 const tomorrowData = document.getElementById("tomorrowData");
 
 locationSelect.addEventListener("change", () => {
-  const coords = locationSelect.value;
-  if (!coords) return;
-  const [lat, lon] = coords.split(",");
+    const coords = locationSelect.value;
+    if (!coords) return;
+    const [lat, lon] = coords.split(",");
 
-  fetchData(lat, lon, "today", todayData);
-  fetchData(lat, lon, "tomorrow", tomorrowData);
+    fetchData(lat, lon, "today", todayData);
+    fetchData(lat, lon, "tomorrow", tomorrowData);
 });
 
 function fetchData(lat, lon, date, targetElement) {
-  const url = `https://api.sunrisesunset.io/json?lat=${lat}&lng=${lon}&date=${date}`;
+    const url = `https://api.sunrisesunset.io/json?lat=${lat}&lng=${lon}&date=${date}`;
 
-  targetElement.innerHTML = "<p>Loading...</p>";
+    targetElement.innerHTML = "<p>Loading...</p>";
 
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-      if (!data.results) {
-        targetElement.innerHTML = "<p>Error: No data available.</p>";
-        return;
-      }
-      const r = data.results;
-      targetElement.innerHTML = `
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            if (!data.results) {
+                targetElement.innerHTML = "<p>Error: No data available.</p>";
+                return;
+            }
+            const r = data.results;
+            targetElement.innerHTML = `
         <ul>
           <li><strong>Sunrise:</strong> ${r.sunrise}</li>
           <li><strong>Sunset:</strong> ${r.sunset}</li>
@@ -35,10 +35,10 @@ function fetchData(lat, lon, date, targetElement) {
           <li><strong>Time Zone:</strong> ${r.timezone}</li>
         </ul>
       `;
-    })
-    .catch((err) => {
-      targetElement.innerHTML = "<p>Error fetching data.</p>";
-      console.error(err);
-    });
+        })
+        .catch((err) => {
+            targetElement.innerHTML = "<p>Error fetching data.</p>";
+            console.error(err);
+        });
 }
 
