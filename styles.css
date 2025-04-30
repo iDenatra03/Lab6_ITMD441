@@ -5,6 +5,9 @@ body {
     background: #f0f8ff;
     color: #333;
   }
+ main {
+    flex: 1;
+ }
   
   header {
     background: #f6ff00;
