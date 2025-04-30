@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunrise & Sunset Dashboard</title>
+  <link rel="stylesheet" href="script.js"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Sunrise & Sunset Dashboard</h1>
+    <p>Select a location to get today and tomorrow's sunrise/sunset data.</p>
+    <label for="locationSelect" class="visually-hidden">Choose location</label>
+    <select id="locationSelect">
+      <option value="">-- Choose a location --</option>
+      <option value="40.7128,-74.0060">New York, NY</option>
+      <option value="34.0522,-118.2437">Los Angeles, CA</option>
+      <option value="41.85003,-87.65005">Chicago, IL</option>
+      <option value="29.7604,-95.3698">Houston, TX</option>
+      <option value="33.7490,-84.3880">Atlanta, GA</option>
+      <option value="47.6062,-122.3321">Seattle, WA</option>
+      <option value="25.7617,-80.1918">Miami, FL</option>
+      <option value="39.7392,-104.9903">Denver, CO</option>
+      <option value="44.9778,-93.2650">Minneapolis, MN</option>
+      <option value="32.7767,-96.7970">Dallas, TX</option>
+    </select>
+  </header>
 
+  <main>
+    <div id="dashboard" class="dashboard">
+      <div class="card">
+        <h2>Today</h2>
+        <div id="todayData">Please select a location above.</div>
+      </div>
+      <div class="card">
+        <h2>Tomorrow</h2>
+        <div id="tomorrowData">Please select a location above.</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Data provided by <a href="https://sunrisesunset.io/api/" target="_blank">SunriseSunset.io API</a></p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

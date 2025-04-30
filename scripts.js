@@ -1,3 +1,5 @@
+// scripts.js
+
 const locationSelect = document.getElementById("locationSelect");
 const todayData = document.getElementById("todayData");
 const tomorrowData = document.getElementById("tomorrowData");
