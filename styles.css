@@ -25,6 +25,7 @@ body {
     flex-wrap: wrap;
     gap: 4rem;
     padding: 2rem;
+    background-color: lightskyblue;
   }
   
   .card {
